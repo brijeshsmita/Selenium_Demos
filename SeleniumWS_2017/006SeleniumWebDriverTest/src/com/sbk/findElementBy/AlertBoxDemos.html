@@ -1,0 +1,42 @@
+<html>
+<title>Phantom JS</Title>
+	<body>
+		<button id='alert' onclick="alert('This is an alert box')">Alert</button>
+		<br>
+		<br>
+		<br>
+		<button id='confirm' onclick="myConfirm()">Confirm</button>
+		<br>
+		<p id="democonfirm"></p>
+		<br>
+		<br>
+		<button id='prompt' onclick="myPrompt()">Prompt</button>
+		<br>
+		<p id="demoprompt"></p>
+		<br>
+		<br>
+	</body>
+	<script>
+		function myConfirm() {
+			var x;
+			if (confirm("Press a button!") == true) {
+				x = "You pressed OK!";
+			} else {
+				x = "You pressed Cancel!";
+			}
+			document.getElementById("democonfirm").innerHTML = x;
+		}
+		
+		function myPrompt() {
+			var person = prompt("Please enter your name", "Enter your name.");
+			
+			if (person != null) {
+				document.getElementById("demoprompt").innerHTML =
+				"Hello " + person + "! How are you today?";
+			}else{
+				document.getElementById("demoprompt").innerHTML =
+				"Please tell me your name.";
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,163 @@
+Introduction to Selenium 2.0 WebDriver
+-----------------------------------------------------------------------------------------------------------------------------------
+i) Introduction to Selenium WebDriver
+ii> WebDriver Environment Setup
+iii) Create first selenium Test Case
+-----------------------------------------------------------------------------------------------------------------------------------
+***********************************************************************************************************************************
+i) Introduction to Selenium WebDriver
+
+Selenium Tool's Suite
+	Selenium IDE
+	Selenium RC
+	Selenium WebDriver
+	Selenium Grid
+-> In 2006 selenium WebDriver was launched at Google
+-> In 2008, the whole selenium team merged Selenium WebDriver 	with Selenium RC inorder to form more powerful tool 	known as Selenium 2.0.
+-> Selenium 2 = Selenium 1.0+ WebDriver
+
+-> Components of Selenium 1.0 ->(Selenium IDE + Selenium RC + Selenium Grid)
+
+-> Components of Selenium 2.0 ->(Selenium IDE + Selenium RC + Selenium WebDriver + Selenium Grid)
+(Note: If Selenium WebDriver is successor of Selenium RC, then also Selenium RC still exists in Selenium 2.0 , for project maintainance)
+-------------------------------------------------------------------------------------------------------------------------------------
+Selenium WebDriver Features
+------------------------------------------------------------------------------------------------------------------------------------
+1->Selenium WebDriver most imp tool in Selenium Suite.
+2-> Selenium WebDriver has programming interface only, no IDE as such.
+for example Selenium IDE has menu and buit-in features.
+3-> Selenium WebDriver supports various programming languages to write programs i.e. Test scripts.
+eg:Java(80%),Python,C#,Ruby,Perl,PHP(parallel Hypertext Programming)
+4-> Selenium WebDriver supports various browsers to create and execute Test cases. eg: Mozilla Firefox(default,so no need to download driver and set the path),Google Chrome, IE,Safari, Opera etc...
+5-> Selenium WebDriver supports various Operating Environment.
+eg: MS Windows, Linux, Macintosh etc...
+(UFT-Unified Functional Testing, also known as QTP supports IE only)
+6-> Selenium WebDriver supports Data driven Testing and Cross-Browser Testing(executing test cases in different browser).
+(where as Selenium IDE does not).
+7-> Selenium WebDriver is faster than other tools of selenium suite. as it supports only programming not tools.
+8-> Selenium WebDriver supports parallel Test execution with the help of either JUnit or TestNG framework.
+(or we can use for Selenium Grid for Parallel testing)
+-----------------------------------------------------------------------------------------------------------------------------------
+Selenium WebDriver Drawbacks
+-----------------------------------------------------------------------------------------------------------------------------------
+1> Selenium WebDriver dosen't have IDE (thus some times difficult to create test cases).
+2> No built-in Result reporting facility.(It provide summary reports only).
+3>No other tool integration for Test management.( for eg: UFT can integrate for test management).
+4>No Centralized maintainance of elements i.e. No Object repository(UFT support local and shared object repositroy).
+
+-----------------------------------------------------------------------------------------------------------------------------------
+How to create Test Cases/ Test scripts/ Tests in Selenium Webdriver?
+-----------------------------------------------------------------------------------------------------------------------------------
+In UFT : We create test cases Using Objects Information and Test Methods.
+
+In Selenium IDE :  We create test cases Using Selenese/ Selenium IDE commands.
+
+In Selenium WebDriver :We create basic test cases Using Element Locators and WebDriver commands/methods.
+1> Element Locators- to recognize/ identify Elements
+2> WebDriver built-in Commands/Methods - to perform operation on elements.
+3> Programming Java Programming Support - for enhancing Test Case.
+4> TestNG Framework - for grouping test cases, Batch Testing, generating Detailed HTML Test Report.
+
+***********************************************************************************************************************************
+-----------------------------------------------------------------------------------------------------------------------------------
+ii> Selenium WebDriver Environment Setup
+-----------------------------------------------------------------------------------------------------------------------------------
+Steps:
+1> Download and install Java (JDK) software - to create programs(Test Scripts)
+2> Set Environment variable path.
+3> Download eclipse IDE and extract - to write and execute Java programs and test cases.
+4> Download Selenium WebDriver Java language binding (www.selenium.org) and add WebDriver jar files to Java project in Eclipse IDE.
+5> Install Firebug and Firepath plugins (Mozilla Firefox) for inspecting elements.
+(UFT has built- in feature for inspecting element-Object Spy, but no IDE and Built- in features in Selenium WebDriver, thus we need to install plugins)
+4> No Need to install plugin for chorme and IE, they have built-in developer tools(F12) for inspecting elements.
+5> Browser Drivers need to be downlaoded (not required for firefox as it is default driver.)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+1>Download Selenium WebDriver Java language Binding
+from http://www.seleniumhq.org/download/ and save the zip file in harddisk.
+2> Add WebDriver jar files to Java Project in Eclipse IDE.
+i> Create java project in Eclipse or select the existing project.
+ii> Right click on java project-> Buld Path -> Configure Build Path-> Select Libraries Tab ->Click Add External jars -> Browse path of the WebDriver jar files.
+***********************************************************************************************************************************
+-----------------------------------------------------------------------------------------------------------------------------------
+iii) Create first Selenium WebDriver Test Case
+-----------------------------------------------------------------------------------------------------------------------------------
+1> import WebDriver and Firefox/IE/Chrome Libraries.(In selenium Test case).
+2> Using Element Locators and WebDriver commands, write Test steps.
+3> Insert java programming statements to enhance test cases.
+4> In future ,Using TestNG annotations group test cases, execute test batches and generates detailed test reports.
+-----------------------------------------------------------------------------------------------------------------------------------
+Now lets Create first Selenium WebDriver Test Case:
+-----------------------------------------------------------------------------------------------------------------------------------
+1> Manual Test Case and then convert it.(Test case template varies from 1 project to another)
+-----------------------------------------------------------------------------------------------------------------------------------
+	Test Case ID     :gcrshop_admin_TC001
+	Test Case Name   :Verify Admin Login in GCR shop web portal
+	Test Steps       :(we test internate app in intranet env first.)
+	i)Launch the browser and navigate to "www.gcrit.com/build3/admin".
+	ii) Enter Username.
+	iii) Enter Password.
+	Vi) Click Login Button.
+
+	Input data:
+		Username= admin
+		Password= admin@123
+
+	Expected url :"http://www.gcrit.com/build3/admin/index.php"
+	Actual       :"http://www.gcrit.com/build3/admin/index.php"
+	Test Result  :Pass
+----------------------------------------------------------------------------------------------------
+*Verification point : Capture the Browser URL after subission of Login Credentials and compare with expected URL.
+----------------------------------------------------------------------------------------------------
+2> Lets now write Selenium WebDriver Test Case:
+-----------------------------------------------------------------------------------------------------------------------------------
+	i)create a class AdminLogin in package sahityTest.
+	ii)In main method, create object of FirefoxDriver using WebDriver interface reference.
+an write the follwing steps
+//Step 1: Launch the FirefoxDriver browser 
+		//-creating object of FirefoxDriver using WebDriver interface reference.Selenium 2.0
+		//WebDriver driverObj = new FirefoxDriver();//no need to explicitly download firefox driver as it is default driver
+		//now the above code will launch FireFox driver with blank URL.
+		
+		//selenium 3.0 
+		/*
+		 * You are using latest version of Selenium WebDriver i.e. Selenium 3.x, this version of webdriver doesn't support direct firefox launch. You have to set the SystemProperty for webdriver.gecko.driver.
+
+			Replace the Code:-
+			
+			WebDriver driverObj;
+			driverObj =new FirefoxDriver();
+			With This code:-
+			
+			WebDriver driverObj;
+			System.setProperty("webdriver.gecko.driver", "<Path to your WebDriver>");
+			driverObj =new FirefoxDriver();
+		 */
+//Step 1: Launch the FirefoxDriver browser 
+		WebDriver driverObj;
+		System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Software\\geckodriver-v0.13.0-win64\\geckodriver.exe");
+		driverObj =new FirefoxDriver();
+//Step 2: Navigate to URL
+		driverObj.get("http://www.gcrit.com/build3/admin/login.php");
+		//Note (install firebug plugin in mozilla)
+//Step 3: Finding element by name and sending the key i.e input data
+		driverObj.findElement(By.name("username")).sendKeys("admin");
+		driverObj.findElement(By.name("password")).sendKeys("admin@123");
+//Step 4: Finding element by id i.e button click
+		driverObj.findElement(By.id("tdb1")).click();
+		
+//Step 5: getting the current Url
+		String strUrl=driverObj.getCurrentUrl();
+		
+//Step 6 :checking the current url with the expected
+		if(strUrl.equals("http://www.gcrit.com/build3/admin/index.php")){
+			System.out.println("Login successfull !!Test Case Pass");
+		}else{
+			System.err.println("Login unsuccessfull !!Test Case Failed");
+		}
+//Step 7: close the browser
+		driverObj.close();//close the browser
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+***********************************************************************************************************************************

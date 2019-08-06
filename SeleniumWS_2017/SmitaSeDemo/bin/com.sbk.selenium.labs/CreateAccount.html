@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="Welcome.html">
+    <h1 align="center">
+        <font color="#0000a0">Create New Savings Account</font>
+    </h1>
+    <p style="text-align: center"><strong><font color="#ff0000">Fill in all the details, then Click Save button - India Customers Only</font></strong></p>
+    <table style="border-style: solid; border-width: medium; width:auto; font-family: Calibri; font-size: large; font-weight: bold; font-style: normal; background-color: #FF99FF; color: #800000;" align="center">
+        <tr>
+            <td>First Name:</td>
+            <td><input maxlength="40" name="FirstName"></td>
+        </tr>
+        <tr>
+            <td>Middle Name:</td>
+            <td><input maxlength="40" name="MName"></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input maxlength="40" name="LName"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input maxlength="40" name="Add"></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>
+                <select size="1" name="city">
+                    <option value="Mumbai" selected>Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value=Delhi>Delhi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input id="Radio1" checked="true" name="R1" type="radio" value="Female" />Female
+                <input id="Radio2" checked="true" name="R1" type="radio" value="Male" />Female
+            </td>
+        </tr>
+        <tr>
+            <td>Mother Tongue :</td>
+            <td>
+                <input type="checkbox" value="Hindi" name="LHindi">Hindi<br />
+                <input type="checkbox" value="English" name="LEnglish">English<br />
+                <input type="checkbox" value="Marathi" name="LMarathi">Marathi<br /> 
+                <input type="checkbox" value="Tamil" name="LTamil">Tamil<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td>
+                <select size="1" name="Date">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                                                 
+                    <select size="1" name="Month">
+                    <option value="January" selected>January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                    </select>
+                    <select name="Year">
+                        <option value="1970" selected>1970</option>
+                        <option value="1971">1971</option>
+                        <option value="1972">1972</option>
+                        <option value="1973">1973</option>
+                        <option value="1974">1974</option>
+                        <option value="1975">1975</option>
+                        <option value="1976">1976</option>
+                        <option value="1977">1977</option>
+                        <option value="1978">1978</option>
+                        <option value="1979">1979</option>
+                        <option value="1980">1980</option>
+                    </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td><center><input onsubmit="alert('New Account Created')" type="Submit" value="Save" name="Save" style="text-align: center"></center></td>
+            <td><center><input onclick="alert('Account Creation Operation Cancelled')" type="button" value="Cancel" name="cancel" style="text-align: center"></center></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

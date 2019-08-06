@@ -1,0 +1,6 @@
+28-01-2017 16:50:48 INFO [Demo]: Launch the FirefoxDriver browser 
+28-01-2017 16:50:48 INFO [Demo]: Opening - http://www.gcrit.com/build3/admin/login.php
+28-01-2017 16:50:53 INFO [Demo]: Entered a valid Email Address.
+28-01-2017 16:50:53 INFO [Demo]: Entered a valid Password.
+28-01-2017 16:50:54 INFO [Demo]: Clicked on the Sign In Button.
+28-01-2017 16:50:54 INFO [Demo]: Verified that the user landed on the Index Page.

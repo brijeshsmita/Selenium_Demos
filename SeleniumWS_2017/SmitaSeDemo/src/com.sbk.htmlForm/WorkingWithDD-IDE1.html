@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///D:/Module4_Akriti/Selenium/MOD04.htm" />
+<title>WorkingWithDD-IDE</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">WorkingWithDD-IDE</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///F:/Selenium/Lesson%202%20-%20Demos/HTML%20Pages/WorkingWithDD.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=FromLB</td>
+	<td>label=Germany</td>
+</tr>
+<tr>
+	<td>assertNotSelectedLabel</td>
+	<td>name=FromLB</td>
+	<td>India</td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>name=FromLB</td>
+	<td>label=Germany</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=FromLB</td>
+	<td>label=India</td>
+</tr>
+<tr>
+	<td>assertNotSelectedLabel</td>
+	<td>name=FromLB</td>
+	<td>India</td>
+</tr>
+<!--addSelectionAndWait & removeSelectionAndWait can be used if the web page causes page reload-->
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

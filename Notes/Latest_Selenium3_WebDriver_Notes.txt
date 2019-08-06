@@ -1,0 +1,11 @@
+You are using latest version of Selenium WebDriver i.e. Selenium 3.x, this version of webdriver doesn't support direct firefox launch. You have to set the SystemProperty for webdriver.gecko.driver.
+
+Replace the Code:-
+
+WebDriver driver;
+driver =new FirefoxDriver();
+With This code:-
+
+WebDriver driver;
+System.setProperty("webdriver.gecko.driver", "<Path to your WebDriver>");
+driver =new FirefoxDriver();

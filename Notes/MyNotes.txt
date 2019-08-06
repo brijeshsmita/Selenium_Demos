@@ -1,0 +1,55 @@
+Software testing 
+-----------------------------------------------------------
+It is a process used to identify the correctness, completeness, and quality of developed computer software. It includes a set of activities conducted with the intent of finding errors in software so that it could be corrected before the product is released to the end users.
+•In simple words, software testing is an activity to check whether the actual results match the expected results and to ensure that the software system is defect free.
+•Why is testing is important?
+•This is China Airlines Airbus A300 crashing due to a software bug on April 26, 1994, killing 264 innocent lives
+•Software bugs can potentially cause monetary and human loss, history is full of such examples
+•In 1985, Canada's Therac-25 radiation therapy machine malfunctioned due to software bug and delivered lethal radiation doses to patients, leaving 3 people dead and critically injuring 3 others
+•In April of 1999, a software bug caused the failure of a $1.2 billion military satellite launch, the costliest accident in history
+•In may of 1996, a software bug caused the bank accounts of 823 customers of a major U.S. bank to be credited with 920 million US dollars
+•As you see, testing is important because software bugs could be expensive or even dangerous
+•As Paul Elrich puts it - "To err is human, but to really foul things up you need a computer."
+----------------------------------------------------
+The Seven Testing Principles
+____________________________________________________
+Principle 1-Testing shows presence of defects 
+
+Principle 2-Exhaustive testing is impossible 
+
+Principle 3-Early Testing 
+
+Principle 4-Defect Clustering 
+
+Principle 5-Pesticide Paradox 
+
+Principle 6-Testing is context dependent 
+
+Principle 7-Absence of errors - fallacy 
+----------------------------------------------------
+___________________SELLENIUM________________________
+1> selenium is an API to automates web-Browser
+2> it supports multiple browser plus supports multiple language.
+3> you only need to learn only 1 laguage to automate any website.
+4> 90% of the compnies are using java with selenium
+5> future of functional automation testing 
+6> one of the reason is "its open source "
+7> it supports all operating system.
+8> completly backed by Google Developers
+-------------------------------------------------------
+components of selenium
+----------------------------------
+1>IDE- just an addon to firefox (firefox plugin)-tool for record and play, can support firefox.
+as large project , code need to recorded and then used by RC or Webdriver.
+2> RC-it support multiple browser,OS,and language
+3> Webdriver-latest component, 
+4> Grid
+
+-------------------------------------------------------
+HOW SELENIUM RC WORKS?
+-------------------------------------------------------
+1>Selenium automates web browsers, any elements on the web browser can be automated using selenium.
+
+2>In order to locate element on a Webpage,Selenium RC inject javascript on the browser.
+
+3> to su

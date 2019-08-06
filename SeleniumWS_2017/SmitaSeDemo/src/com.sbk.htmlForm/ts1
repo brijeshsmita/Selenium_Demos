@@ -1,0 +1,29 @@
+using NUnit.Framework;
+using NUnit.Core;
+
+namespace SeleniumTests
+{
+    public class Ts1
+    {
+        [Suite] public static TestSuite Suite
+        {
+            get
+            {
+                TestSuite suite = new TestSuite("Ts1");
+                suite.Add(new WaitForCommands());
+                suite.Add(new StoreElementPresent());
+                suite.Add(new LocatingElementsInIDE());
+                suite.Add(new AlertExample());
+                suite.Add(new AssertAlertExamples());
+                suite.Add(new AssertAlertExamples1());
+                suite.Add(new VerifyAlert());
+                suite.Add(new OkConfirmation());
+                suite.Add(new CancelConfirmation());
+                suite.Add(new VerifyAssertNotAlert());
+                suite.Add(new CheckBoxExample1());
+                suite.Add(new CheckBoxExample2());
+                return suite;
+            }
+        }
+    }
+}

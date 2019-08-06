@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Employee detail</title>
+
+<script><!--
+
+	//Function to validate resume form
+	function validate_submit(form){
+		var fname=form.fname.value;
+		var lname=form.lname.value;
+		var dob=form.dob.value;
+		var cont_no=form.contact_no.value;
+		var email=form.email.value;
+		var country=document.getElementById("country");
+		var relation=document.getElementById("relation");
+		var city=document.getElementById("city_input");
+		var city;
+		var gender=form.gender;
+		var total_expr=form.total_exp.value;
+		var check_gender=false;
+		var present_emp=form.present_emp.value;
+		var relation=form.relation;
+		var resume=form.resume.value;
+		
+		//alert(total_expr);
+
+		var reg_name=/^[a-zA-Z]+$/;
+		var reg_dob=/^\d{2}\/\d{2}\/\d{4}$/;
+		var reg_cont=/^\d{10}$/;
+		var reg_email=/^([a-zA-Z0-9_.])+@([[a-zA-Z0-9_.])+\.([a-zA-Z])+$/;	
+		
+		var err_msg="";
+		var err_count=0;
+		if(fname==""){
+			err_count++;
+			err_msg +=err_count+".First Name cannot be Empty\n";
+		}else if(!reg_name.test(fname)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid First Name\n";
+		}
+
+		if(lname==""){
+			err_count++;
+			err_msg +=err_count+".Last Name cannot be Empty\n";
+		}else if(!reg_name.test(lname)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid Last Name\n";
+		}
+
+		if(dob==""){
+			err_count++;
+			err_msg +=err_count+".DOB cannot be Empty\n";
+		}else if(!reg_dob.test(dob)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid DOB\n";
+		}
+
+		if(cont_no==""){
+			err_count++;
+			err_msg +=err_count+".Contact no cannot be Empty\n";
+		}else if(!reg_cont.test(cont_no)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter 10 digit Contact no\n";
+		}
+
+		if(email==""){
+			err_count++;
+			err_msg +=err_count+".Email Id no cannot be Empty\n";
+		}else if(!reg_email.test(email)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid Email Id\n";
+		}
+
+		if(country.options.selectedIndex==0){
+			err_count++;
+			err_msg +=err_count+".Select one Country\n";
+		}
+
+		if(city.options.selectedIndex==0){
+			err_count++;
+			err_msg +=err_count+".Select one City\n";
+		}
+
+
+		for(i=0;i<gender.length;i++)
+		{ 
+			if (gender[i].checked==true)
+			{	check_gender=true;
+				break;
+			}
+		}
+		if(!check_gender)
+		{
+			err_count++;
+			err_msg +=err_count+".Select Gender\n";
+		}
+
+		if(total_expr==""){
+			err_count++;
+			err_msg +=err_count+".Tatal expr is madatory\n";
+		}else if(!/\d{1,3}/.test(total_expr)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid Total exp\n";
+		}
+
+		if(relation.options.selectedIndex==0){
+			err_count++;
+			err_msg +=err_count+".Select your Relation\n";
+		}
+
+		if(present_emp==""){
+			err_count++;
+			err_msg +=err_count+".Present Employee is madatory\n";
+		}else if(!reg_name.test(present_emp)){
+			//alert("name not valid");
+			err_count++;
+			err_msg +=err_count+".Enter valid Present employee\n";
+		}
+
+		if(resume==""){
+			err_count++;
+			err_msg +=err_count+".Copy paste your resume\n";
+		}
+		if(err_msg!=""){
+			alert(err_msg);
+			//disable the preview button
+			document.getElementById("prev").disabled=true;
+			return false;
+		}else{
+			alert("Resume submitted successfully");
+			//Enable the preview button only when form is valid
+			document.getElementById("prev").disabled=false;
+			return true;
+		}
+	}
+
+	//Function Populates City drop box on Country selection
+	function populate_Onchange(){
+		var country=document.form1.country.value;
+		str="";
+		switch(country){
+			case 'India':  str='<select name="city" id="city_input">'+
+				'<option value="" selected>Select City</option>'+
+				'<option value="Mumbai">Mumbai</option>'+
+				'<option value="Pune">Pune</option>'+
+				'<option value="Chennai">Chennai</option>'+
+				'<option value="Delhi">Delhi</option>'+
+				'<option value="Bangalore">Bangalore</option>'+
+				'<option value="Hyderabad">Hyderabad</option>'+
+				'</select>' ; break;
+			case 'Australia': str='<select name="city" id="city_input">'+
+				'<option value="" selected>Select City</option>'+
+				'<option value="Adelaide">Adelaide</option>'+
+				'<option value="Sydney">Sydney</option>'+
+				'<option value="Melbourne">Melbourne</option>'+
+				'<option value="Brisbane">Brisbane</option>'+									
+				'</select>' ; break;
+			case 'USA': str='<select name="city" id="city_input">'+
+				'<option value="" selected>Select City</option>'+
+				'<option value="NewYork">NewYork</option>'+
+				'<option value="SanFransisco">SanFransisco</option>'+
+				'<option value="Boston">Boston</option>'+
+				'<option value="New Orleans">New Orleans</option>'+									
+				'</select>' ; break;
+			case 'United Kingdom': str='<select name="city" id="city_input">'+
+				'<option value="" selected>Select City</option>'+
+				'<option value="Edinburgh">Edinburgh</option>'+
+				'<option value="Manchester">Manchester</option>'+
+				'<option value="Cambridge">Cambridge</option>'+
+				'<option value="NewCastle">Newcastle</option>'+									
+				'</select>' ; break;
+
+			default:
+				str='<select name="city" id="city_input">'+
+				'<option value="">Select Country first</option>';
+				break;
+							
+		}
+		//Includes new City drop box in <td> element
+		document.getElementById("city").innerHTML=str;
+	}
+
+	//Opens preview window when form is valid
+	function prev_win(form){
+		//var form=document.form1;
+		
+		if(validate_submit(form)){
+			var myWin=window.open("","","");
+			myWin.document.write("<h1 align='center'>Candidate Details</h1>");
+			myWin.document.write("<pre>");
+			myWin.document.write("<b>Candidate Name</b>	:"+form.fname.value+" "+form.lname.value+"<br>");
+			myWin.document.write("<b>Email Id</b>	:"+form.email.value.link("mailto:"+form.email.value)+"<br>");
+			myWin.document.write("<b>DOB</b>		:"+form.dob.value+"<br>");
+			myWin.document.write("<b>Contact No</b>	:"+form.contact_no.value+"<br>");
+			myWin.document.write("<b>City</b>		:"+form.city.value+"<br>");
+			myWin.document.write("<b>Total Experience</b>:"+form.total_exp.value+"<br>");
+			myWin.document.write("<b>Prent Employer</b>	:"+form.present_emp.value+"<br>");
+			myWin.document.write("</pre>");
+		}
+	}
+//--></script>
+<style type="text/css">
+	.astrik{
+		color: red;
+	}
+	.td_right{
+		text-align: right;
+	}
+	#Format
+	{
+		font-family:"Times New Roman", Times, serif;
+ } 
+ #EmailFormat
+	{
+		font-family:"Times New Roman", Times, serif;
+ } 
+</style>
+</head>
+<body bgcolor="Pink">
+<h3>Refer Your Friend</h3>
+	<pre>		Enter the personal details:				Fields marked(<span class="astrik">*</span>) are mandatory</pre>
+	<form name="form1">
+		<table style="" width="700" frame="border" align="center" >
+			<tr >
+				<td class="td_right"><span class="astrik">*</span>First Name: </td>
+				<td><input id="FN" type="text" name="fname"/></td>
+			</tr>
+			<tr>
+				<td class="td_right">Middle Name: </td>
+				<td><input type="text" name="mname"/></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Last Name: </td>
+				<td ><input id="LN" type="text" name="lname"/></td>
+			</tr>
+			
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>DOB: </td>
+				<td><input type="text" class="Format" name="dob"/></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Contact No: </td>
+				<td><input type="text"  name="contact_no"/></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Email Id: </td>
+				<td><input id="EmailID" class="EmailFormat" type="text" name="email"/></td>
+			</tr>
+			<tr>
+				<td class="td_right">Passport No: </td>
+				<td><input id="PNO" type="text" name="pp_no"/></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Country: </td>
+				<td>
+					<select name="country" id="country" Onchange="populate_Onchange()">
+						<option value="" selected>Select Country</option>
+						<option value="India">India</option>
+						<option value="Australia">Australia</option>
+						<option value="USA">USA</option>
+						<option value="United Kingdom">United Kingdom
+						</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>City/Location: </td>
+				<td id="city">
+					<select name="city" id="city_input">
+						<option value="">Select Country first</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Gender: </td>
+				<td>
+					<input type ="radio" value="male" name="gender" >Male<br>
+					<input type ="radio" value="female" name="gender">Female
+				</td>
+			</tr>
+			<tr>
+				<td class="td_right">Total Experience(Years): </td>
+				<td><input type="text" name="total_exp"></input></td>
+			</tr>
+			<tr>
+				<td class="td_right">Relevant Experience(Years): </td>
+				<td><input type="text" name="relv_exp"></input></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Present Employer: </td>
+				<td><input type="text" name="present_emp"></input></td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Reletionship with the candidate: </td>
+				<td>
+					<select name="relation">
+						<option value="">Select Relation</option>
+						<option value="Relative">Friend</option>
+						<option value="Friend">Colleague</option>
+						<option value="Family member">Family relation</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="td_right"><span class="astrik">*</span>Copy paste resume: </td>
+				<td><textarea  name="resume" cols="20" rows="3" ></textarea></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><input type="button" value="Submit"  name="submit" onclick="return validate_submit(this.form)" /></td>
+				<td>
+					<input type="reset" value="Reset"  name="reset" />
+					<input type="button" value="Preview"  id="prev" name="prev" onclick="prev_win(this.form)" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

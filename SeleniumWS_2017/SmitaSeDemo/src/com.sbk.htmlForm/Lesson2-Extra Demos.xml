@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="WorkingWithDD-IDE1.html">WorkingWithDD-IDE1</a></td></tr>
+<tr><td><a href="WorkingWithDD-IDE2.html">WorkingWithDD-IDE2</a></td></tr>
+<tr><td><a href="FindElementEditable.html">FindElementEditable</a></td></tr>
+<tr><td><a href="VerifyEvalExample.html">VerifyEvalExample</a></td></tr>
+<tr><td><a href="VerifyLocAndAssertLoc.html">VerifyLocAndAssertLoc</a></td></tr>
+<tr><td><a href="runScriptDemo.html">runScriptDemo</a></td></tr>
+<tr><td><a href="WorkingWithPrompt.html">WorkingWithPrompt</a></td></tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+    <html>
+    <head>
+    <title>
+    Login page
+    </title>
+        <style type="text/css">
+            .auto-style1
+            {
+                font-size: medium;
+            }
+        </style>
+    </head>
+    <body bgcolor="Pink">
+    <h1 style="font-family:Garamond; font-size: x-large; font-weight: bold; color: #003300;"center";font-size:20pt;
+    color:#00FF00;>
+        Login Form</h1>
+        <p style="font-family:Garamond; font-weight: bold; color: #003300;"center";font-size:20pt;
+    color:#00FF00; class="auto-style1">
+            Fill out the login form to login to our Online Shopping Mall</p>
+    <form name="login" style="font-family: Garamond; font-weight: bold; color: #003300; font-size: x-large;">
+    Username :&nbsp; <input type="text" name="userid"/>
+        <br />
+        <br />
+    Password&nbsp; :&nbsp; <input type="password" name="pswrd"/>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" onclick="check(this.form)" value="Login" style="font-family: Garamond; font-size: medium; font-weight: bold; color: #003300;"/>&nbsp;
+    <input type="reset" value="Cancel" style="font-family: Garamond; font-size: medium; font-weight: bold; color: #003300;"/>
+    </form>
+    <script language="javascript">
+        function check(form)/*function to check userid & password*/ {
+            /*the following code checkes whether the entered userid and password are matching*/
+            if (form.userid.value == "SeleniumUser" && form.pswrd.value == "selenium123") {
+                window.open('Welcome.html')/*opens the target page while Id & password matches*/
+            }
+            else {
+                alert("Error Password or Username")/*displays error message*/
+            }
+        }
+    </script>
+    </body>
+    </html>
+

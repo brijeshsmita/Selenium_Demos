@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<button id='newtab' onclick="myNewTab()">Open in new tab</button>
+		<br>
+		<br>
+		<br>
+		<button id='newwindow' onclick="myWindow()">Open in new window</button>
+	</body>
+	<script>
+		function myNewTab() {
+			window.open("AlertBoxDemos.html");
+		}
+		
+		function myWindow() {
+			window.open("AlertBoxDemos.html", "New Window", "width=700, height=300");
+		}
+	</script>
+</html>

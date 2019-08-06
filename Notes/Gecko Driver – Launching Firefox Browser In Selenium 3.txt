@@ -1,0 +1,83 @@
+Gecko Driver – Launching Firefox Browser In Selenium 3
+
+Selenium WebDriver scripts which were working fine yesterday are not working today?
+Why it is not working? Every Selenium Tester has this question. The solution is here. We need to have Gecko Driver to run our scripts with the updated Selenium.
+Executing Selenium WebDriver Script in Firefox Browser using Gecko Driver:
+Here in this post, we see how to run Selenium WebDriver Script in Firefox Browser using Gecko Driver. Moving forward, we need to have geckodriver.exe and Selenium WebDriver.
+Assuming that you have already Installed Selenium WebDriver.
+If you want to install Selenium WebDriver, click on the link below to install Selenium WebDriver in few clicks.
+How To Download And Install Selenium WebDriver
+Each and every browser has its own Driver to execute Selenium WebDriver Scripts. Selenium WebDriver supports browsers such as Mozilla Firefox, Google Chrome, Internet Explorer, Opera, Safari etc.,
+Here we are going to see how to run Selenium WebDriver Script in Firefox Browser using Gecko Driver.
+Why Gecko Driver?
+Selenium has launched Selenium 3 and if you are using Firefox latest version then you may face some issues.
+To launch latest version of Firefox Browser using Selnium 3, we need to set a system property “webdriver.gecko.driver” to the path of executable file “geckodriver.exe”
+Also find,
+How to Run Selenium Webdriver Script in Firefox browser – Old Version
+How to Run Selenium Webdriver Script in Internet Explorer
+How to Run Selenium WebDriver Script in Chrome Browser
+Step 1: Download GeckoDriver.exe
+Click here to download Gecko driver
+Download the latest release of Gecko driver and unzip the downloaded compressed file and keep it somewhere on a known location on your system.
+Step 2: Executing the Test Script in Firefox Browser
+Find the sample script (using Java) mentioned below to run test script in Firefox browser using Gecko Driver. Execute it to run the test in Firefox browser which will first open Firefox browser and then open the appropriate URL mentioned in the script
+SCRIPT:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+package seleniumTutorial;
+ 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+ 
+public class GeckoDriver {
+ 
+	public static void main(String[] args) {
+		
+                //Change the path based on your file path
+                //System.setProperty("webdriver.gecko.driver","Path of geckodriver.exe")
+		
+                System.setProperty("webdriver.gecko.driver","D://Selenium Training//Selenium Environment Files//geckodriver.exe"); 
+ 
+                WebDriver driver = new FirefoxDriver();
+                
+                driver.get("http://www.softwaretestingmaterial.com/software-testing-interview-questions-free-ebook/");
+                
+                System.out.println("Selenium Webdriver Script in Firefox browser using Gecko Driver | Software Testing Material");
+                
+                driver.close();
+        
+	}
+	
+}
+Common Issues You May Face:
+Issue 1:
+If you use old version of mozilla firefox (eg. firefox 45) and latest version of Selenium (Selenium 3.0.1) then you face the below mentioned error.
+Exception in thread “main” java.lang.IllegalStateException
+Issue 2:
+If you use latest version of Mozilla Firefox (eg. Firefox 49) and old version of Selenium (Selenium 2.53) then you face the below mentioned error.
+org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms.
+To overcome these issues, you need to download Gecko Driver as shown above.

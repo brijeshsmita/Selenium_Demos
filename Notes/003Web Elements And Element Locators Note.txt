@@ -1,0 +1,82 @@
+Web Elements And Element Locators
+------------------------------------------------------------------------------------------------------------------------------------------
+"Major challenge in functional test automation is Object Idenftification, if tool identifies object then automation is very simple."
+------------------------------------------------------------------------------------------------------------------------------------------
+I) Web Elements 
+-using driver object we can handle :
+	i)Browser 
+	ii)Page
+________________________________________________________________________________________
+Import Web Page Elements
+________________________________________________________________________________________
+	Link
+	Buttons
+	Drop Down List
+	Radio Button
+	Check Bok
+	Edit Box
+	Text Area
+	Image , Image Link, Image Button
+	List Box
+	Combo Box
+	Web Table/HTML Table
+	Web Frame
+________________________________________________________________________________________
+Operation on browsers
+________________________________________________________________________________________
+	-launch browser
+	-Navigate to specified URL
+	-Navigate back
+	-Navigate forward
+	-Refresh the browser
+	-Maximize the Bowser
+	-Minimize the Bowser
+	-Close focused browser
+	-Close all opened browsers
+________________________________________________________________________________________
+Operation on Page
+________________________________________________________________________________________
+	-Get Page Title
+	-Get Page Source
+	-Get Page URL etc.
+________________________________________________________________________________________
+Operation on Text/Edit Box
+________________________________________________________________________________________
+	-Enter Some value
+	-Clear the value
+	-check the existence
+	-check enabled status
+	-Get the value etc...
+________________________________________________________________________________________
+Operation on Link Object
+________________________________________________________________________________________
+	-Click on the link
+	-check the existence
+	-check enabled status
+	-Return link name etc...
+________________________________________________________________________________________
+Operation on Image Object(General Image , Image Link, Image Button)
+________________________________________________________________________________________
+	-General Image
+	-Image Link(Click, Redirects to another page)
+	-Image Button(Submits)
+eg: newstours.demoaut.com
+________________________________________________________________________________________
+Operation on Check Box Element
+________________________________________________________________________________________
+	-Check if the Check Box  is displayed or not?
+	-Check if the Check Box  is enabled or not?
+	-select
+	-Unselect
+________________________________________________________________________________________
+Operation on Text Area/Message Element( which does not have any functionality eg: <h1>Text Area</h1>
+________________________________________________________________________________________
+	-Return/Capture Text Area
+________________________________________________________________________________________
+Operation on Text Area Element
+(Constant Text Area eg: <h1>Text Area</h1, 
+Error Message, 
+Address input >
+________________________________________________________________________________________
+	-Return/Capture Text Area
+------------------------------------------------------------------------------------------------------------------------------------------
