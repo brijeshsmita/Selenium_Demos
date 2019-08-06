@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.sbk.util.DriverUtil;
+import com.sbk.util.ChromeDriverUtil;
 
 /**
  * @author Smita B Kumar
@@ -34,7 +34,7 @@ public class SendAttachmentFileViaGmailSecureNewUI {
 		Add your File location
 		Click on Send Button
 		 */
-		WebDriver driver=DriverUtil.getDriver();
+		WebDriver driver=ChromeDriverUtil.getDriver();
 		driver.manage().window().maximize();
 		//delete all cookies
 		driver.manage().deleteAllCookies();
@@ -42,31 +42,31 @@ public class SendAttachmentFileViaGmailSecureNewUI {
 		//open gmail
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Email //or //identifierId
-		driver.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("smitaselenium3@gmail.com");
+		driver.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("umagupta1960@gmail.com");
 		//enter emailid
 		//next or  //identifierNext
 		driver.findElement(By.xpath("//*[@id='identifierNext']")).click();
 		//click on next
 		Thread.sleep(1500);
 		//Passwd or @name='password'
-		driver.findElement(By.xpath(".//*[@name='password']")).sendKeys("Selenium@2017");
+		driver.findElement(By.xpath(".//*[@name='password']")).sendKeys("umagupta1960");
 		// enter password
 		//passwordNext or signIn
 		driver.findElement(By.xpath("//*[@id='passwordNext']")).click();
 		Thread.sleep(1500);
 		//click on sign in
-		driver.findElement(By.xpath("//div[contains(text(),'COMPOSE')]")).click();
+		driver.findElement(By.xpath("//*[@id=\":jc\"]")).click();
 		//click on compose button
 
-		driver.findElement(By.xpath("//form[1]//textarea[1]")).sendKeys("smitaselenium3@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\":om\"]")).sendKeys("saiakshithreddyg@gmail.com;smitakumar@synergetics-india.com");
 		//enter email id where you need to send email
 
-		driver.findElement(By.xpath("//div[@class='aoD az6']//input[@class='aoT']")).sendKeys("Please find attachment");
+		driver.findElement(By.xpath("//*[@id=\":o4\"]")).sendKeys("Please find Home invitation as attachment");
 		//Enter subject
 		Thread.sleep(1500);
-		driver.findElement(By.xpath("//div[@class='a1 aaA aMZ']")).click();
+		driver.findElement(By.xpath("//*[@id=\":pu\"]")).click();
 		//click on attachment icon
-		StringSelection ss = new StringSelection("D:\\Selenium\\IoT.docx");
+		StringSelection ss = new StringSelection("E:\\Selenium\\SeleniumWS_2017\\060SeleniumWebDriver\\src\\Invitation.txt");
 		//upload your file using RobotClass
 		//attach your path where file is located.
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
@@ -80,7 +80,8 @@ public class SendAttachmentFileViaGmailSecureNewUI {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//div[text()='Send']")).click();
+		driver.findElement(By.xpath("//*[@id=\":nu\"]")).click();
 		//Click on send
+		System.out.println("Email Send");
 	}
 }
