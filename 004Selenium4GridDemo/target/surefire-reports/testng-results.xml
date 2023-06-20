@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-20T09:05:45Z" name="com.selenium4.demo.ChromeBrowserTest" finished-at="2023-06-20T09:05:52Z" duration-ms="6468">
+    <groups>
+    </groups>
+    <test started-at="2023-06-20T09:05:45Z" name="Command line test" finished-at="2023-06-20T09:05:52Z" duration-ms="6468">
+      <class name="com.selenium4.demo.ChromeBrowserTest">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:com.selenium4.demo.ChromeBrowserTest@545997b1]" started-at="2023-06-20T14:35:45Z" name="testSetUp" finished-at="2023-06-20T14:35:50Z" duration-ms="4982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="test_ToDo_App()[pri:0, instance:com.selenium4.demo.ChromeBrowserTest@545997b1]" started-at="2023-06-20T14:35:50Z" name="test_ToDo_App" finished-at="2023-06-20T14:35:51Z" duration-ms="1114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_ToDo_App -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium4.demo.ChromeBrowserTest@545997b1]" started-at="2023-06-20T14:35:51Z" name="tearDown" finished-at="2023-06-20T14:35:52Z" duration-ms="359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.selenium4.demo.ChromeBrowserTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.selenium4.demo.ChromeBrowserTest -->
+</testng-results>
